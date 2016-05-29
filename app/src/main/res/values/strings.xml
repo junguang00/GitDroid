@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">GitDroid</string>
+
+    <string name="login_github">登录GitHub</string>
+    <string name="enter_app">直接使用</string>
+
+    <string name="welcome_to_gitdroid">Welcome to GitDroid</string>
+    <string name="welcome_introduction">全平台管理你的GitHub账号，时刻跟踪最热门的开源库</string>
+
+    <string name="arsenal">Arsenal</string>
+    <string name="arsenal_introduction">你的个人Android开发兵工厂，十八般武器样样精通</string>
+    
+    <string name="tips_and_tricks">Tips and Tricks</string>
+    <string name="tips_introduction">每日积累编程干货，聚沙成塔，你也能成大牛！</string>
 </resources>
