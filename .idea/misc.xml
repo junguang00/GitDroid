@@ -1,10 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0">
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.hotrepo.HotRepoFragment viewPager" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.hotrepo.HotRepoFragment tabLayout" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.github.hotrepo.HotRepoFragment" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.main.MainActivity toolbar" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.main.MainActivity navigationView" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.main.MainActivity drawerLayout" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.main.MainActivity" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager0 ivTablet" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager0 ivDesktop" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager0 Pager0(android.content.Context context)" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager0 Pager0(android.content.Context context, android.util.AttributeSet attrs)" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager0 Pager0(android.content.Context context, android.util.AttributeSet attrs, int defStyleAttr)" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager0" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager2 ivBubble3" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager2 ivBubble2" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager2 ivBubble1" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager2 Pager2(android.content.Context context)" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager2 Pager2(android.content.Context context, android.util.AttributeSet attrs)" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager2 Pager2(android.content.Context context, android.util.AttributeSet attrs, int defStyleAttr)" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager2" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.hotrepo.RepoListFragment listView" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.hotrepo.RepoListFragment ptrFrameLayout" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.github.hotrepo.RepoListFragment" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment colorYellow" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment colorRed" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment colorGreen" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment ivPhone" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment layoutPhoneInner" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment layoutPhone" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment indicator" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment viewPager" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment frameLayout" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment" />
+    </entry_points>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="butterknife.OnClick" />
+    </list>
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="Bundled (Maven 3)" />
       </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="NullableNotNullManager">
+    <option name="myDefaultNullable" value="android.support.annotation.Nullable" />
+    <option name="myDefaultNotNull" value="android.support.annotation.NonNull" />
+    <option name="myNullables">
+      <value>
+        <list size="4">
+          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.Nullable" />
+          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nullable" />
+          <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.Nullable" />
+          <item index="3" class="java.lang.String" itemvalue="android.support.annotation.Nullable" />
+        </list>
+      </value>
+    </option>
+    <option name="myNotNulls">
+      <value>
+        <list size="4">
+          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.NotNull" />
+          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nonnull" />
+          <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.NonNull" />
+          <item index="3" class="java.lang.String" itemvalue="android.support.annotation.NonNull" />
+        </list>
+      </value>
     </option>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">

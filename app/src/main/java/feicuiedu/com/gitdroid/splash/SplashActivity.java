@@ -8,6 +8,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import feicuiedu.com.gitdroid.R;
 import feicuiedu.com.gitdroid.commons.ActivityUtils;
+import feicuiedu.com.gitdroid.main.MainActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -32,7 +33,7 @@ public class SplashActivity extends AppCompatActivity {
                 activityUtils.showToast("navigateToMain: login!");
                 break;
             case R.id.btnEnter:
-                activityUtils.showToast("navigateToMain: enter!");
+                activityUtils.startActivity(MainActivity.class);
                 break;
         }
 
