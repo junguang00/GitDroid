@@ -1,4 +1,4 @@
-package feicuiedu.com.gitdroid.github.repos;
+package feicuiedu.com.gitdroid.github.entity;
 
 
 import android.content.Context;

@@ -35,6 +35,30 @@
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment viewPager" />
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment frameLayout" />
       <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.FooterView void setErrorClickListener(android.view.View.OnClickListener onClickListener)" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.FooterView tvError" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.FooterView tvComplete" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.FooterView progressBar" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.FooterView FooterView(android.content.Context context)" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.FooterView FooterView(android.content.Context context, android.util.AttributeSet attrs)" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.FooterView FooterView(android.content.Context context, android.util.AttributeSet attrs, int defStyleAttr)" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.FooterView" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.HotRepoFragment viewPager" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.HotRepoFragment tabLayout" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.github.repos.HotRepoFragment" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.RepoListFragment errorView" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.RepoListFragment emptyView" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.RepoListFragment listView" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.RepoListFragment ptrFrameLayout" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.RepoListFragment" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.ReposAdapter.ViewHolder tvRepoStars" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.ReposAdapter.ViewHolder tvRepoInfo" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.ReposAdapter.ViewHolder tvRepoName" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.ReposAdapter.ViewHolder ivIcon" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.ReposAdapter.ViewHolder ViewHolder(android.view.View view)" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.ReposAdapter.ViewHolder" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.ReposAdapter ReposAdapter(android.content.Context context)" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.ReposAdapter" />
     </entry_points>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="butterknife.OnClick" />

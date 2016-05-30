@@ -28,7 +28,6 @@
             android:textSize="@dimen/sp_20"
             android:textColor="@color/colorPrimary"
             android:textStyle="bold"
-            android:text="facebook/react-native"
             />
         <TextView
             android:id="@+id/tvRepoInfo"
@@ -36,8 +35,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_2"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:text="A framework for building native apps with React."
-
             />
         <TextView
             android:id="@+id/tvRepoStars"
@@ -45,8 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_2"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/colorBlue"
-            android:text="star: 14200"/>
+            android:textColor="@color/colorBlue"/>
     </LinearLayout>
 
     <ImageView
