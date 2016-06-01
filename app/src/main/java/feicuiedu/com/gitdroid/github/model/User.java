@@ -1,12 +1,17 @@
-package feicuiedu.com.gitdroid.github.entity;
+package feicuiedu.com.gitdroid.github.model;
 
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 @SuppressWarnings("unused")
-public class User {
+public class User implements Serializable{
 
     private String login;
+
+    private String name;
+
     private int id;
 
     @SerializedName("avatar_url")
@@ -22,5 +27,9 @@ public class User {
 
     public int getId() {
         return id;
+    }
+
+    public String getName() {
+        return name;
     }
 }

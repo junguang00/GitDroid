@@ -5,7 +5,7 @@ public final class LogUtils {
 
     private static final String TAG = "gitdroid";
 
-    private static final String TAG_TRACE = "method_trace";
+    private static final String TAG_TRACE = "gitdroid";
 
     private static final class StackTraceDebug extends RuntimeException {
         final static private long serialVersionUID = 27058374L;

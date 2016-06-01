@@ -21,14 +21,16 @@
 
     <ImageView
         android:id="@+id/ivIcon"
-        android:layout_width="@dimen/dp_60"
-        android:layout_height="@dimen/dp_60"
-        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginRight="@dimen/dp_3"
+        android:layout_alignRight="@+id/btnSearch"
         android:layout_alignParentTop="true"
-        android:layout_margin="@dimen/dp_10"
-        android:scaleType="centerCrop"/>
+        android:layout_marginTop="@dimen/dp_20"
+        android:src="@drawable/ic_avatar"/>
 
     <Button
+        android:id="@+id/btnSearch"
         android:layout_width="@dimen/dp_300"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnLogin"

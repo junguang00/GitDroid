@@ -27,9 +27,10 @@
     <string name="search">搜索</string>
 
     <string name="no_content">没有内容</string>
-    <string name="refresh_error">刷新发生错误</string>
+    <string name="refresh_error">刷新发生错误: %s</string>
+    <string name="switch_account">切换账号</string>
 
-    <string name="load_more_error">加载发生错误</string>
+    <string name="load_more_error">加载发生错误: %s</string>
     <string name="load_more_end">没有更多数据</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>

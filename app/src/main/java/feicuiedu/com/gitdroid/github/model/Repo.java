@@ -1,9 +1,11 @@
-package feicuiedu.com.gitdroid.github.entity;
+package feicuiedu.com.gitdroid.github.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 @SuppressWarnings("unused")
-public class Repo {
+public class Repo implements Serializable{
 
     private String name;
 
@@ -14,6 +16,9 @@ public class Repo {
 
     @SerializedName("stargazers_count")
     private int starCount;
+
+    @SerializedName("forks_count")
+    private int forkCount;
 
     private User owner;
 
@@ -35,5 +40,9 @@ public class Repo {
 
     public String getName() {
         return name;
+    }
+
+    public int getForkCount() {
+        return forkCount;
     }
 }

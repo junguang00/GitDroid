@@ -3,9 +3,9 @@ package feicuiedu.com.gitdroid.github.repos.repolist;
 
 import com.hannesdorfmann.mosby.mvp.MvpNullObjectBasePresenter;
 
-import feicuiedu.com.gitdroid.github.GitHubClient;
-import feicuiedu.com.gitdroid.github.entity.Language;
-import feicuiedu.com.gitdroid.github.entity.RepoResult;
+import feicuiedu.com.gitdroid.github.network.GitHubClient;
+import feicuiedu.com.gitdroid.github.model.Language;
+import feicuiedu.com.gitdroid.github.model.RepoResult;
 import feicuiedu.com.gitdroid.github.repos.repolist.view.PtrPageView;
 import retrofit2.Call;
 import retrofit2.Callback;

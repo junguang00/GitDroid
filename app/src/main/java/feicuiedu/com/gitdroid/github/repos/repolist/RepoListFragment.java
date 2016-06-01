@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,11 +19,13 @@ import com.mugen.MugenCallbacks;
 import java.util.List;
 
 import butterknife.Bind;
+import butterknife.BindString;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import feicuiedu.com.gitdroid.R;
-import feicuiedu.com.gitdroid.github.entity.Language;
-import feicuiedu.com.gitdroid.github.entity.Repo;
+import feicuiedu.com.gitdroid.github.model.Language;
+import feicuiedu.com.gitdroid.github.model.Repo;
+import feicuiedu.com.gitdroid.github.repo.RepoInfoActivity;
 import feicuiedu.com.gitdroid.github.repos.repolist.view.PtrPageView;
 import in.srain.cube.views.ptr.PtrClassicFrameLayout;
 import in.srain.cube.views.ptr.PtrDefaultHandler;
@@ -47,6 +50,8 @@ implements PtrPageView{
     @Bind(R.id.emptyView) TextView emptyView;
     @Bind(R.id.errorView) TextView errorView;
 
+    @BindString(R.string.refresh_error) String refreshError;
+
     private ReposAdapter adapter;
     private FooterView footerView;
 
@@ -68,6 +73,11 @@ implements PtrPageView{
         ButterKnife.bind(this, view);
 
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                RepoInfoActivity.open(getContext(), adapter.getItem(position));
+            }
+        });
 
         initPullToRefresh();
         initInfiniteScroll();
@@ -173,6 +183,8 @@ implements PtrPageView{
         listView.setVisibility(View.INVISIBLE);
         errorView.setVisibility(View.VISIBLE);
         emptyView.setVisibility(View.GONE);
+
+        errorView.setText(String.format(refreshError, info));
     }
 
     @OnClick({R.id.errorView, R.id.emptyView})

@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -19,7 +18,8 @@ import java.util.Collection;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import feicuiedu.com.gitdroid.R;
-import feicuiedu.com.gitdroid.github.entity.Repo;
+import feicuiedu.com.gitdroid.github.network.AvatarLoadOptions;
+import feicuiedu.com.gitdroid.github.model.Repo;
 
 class ReposAdapter extends BaseAdapter {
 
@@ -29,22 +29,14 @@ class ReposAdapter extends BaseAdapter {
 
     public ReposAdapter(Context context) {
         data = new ArrayList<>();
-        options = new DisplayImageOptions.Builder()
-                .showImageForEmptyUri(R.drawable.ic_avatar)
-                .showImageOnLoading(R.drawable.ic_avatar)
-                .showImageOnFail(R.drawable.ic_avatar)
-                .cacheInMemory(true)
-                .cacheOnDisk(true)
-                .resetViewBeforeLoading(true)
-                .displayer(new RoundedBitmapDisplayer(context.getResources().getDimensionPixelSize(R.dimen.dp_6)))
-                .build();
+        options = AvatarLoadOptions.build(context);
     }
 
     @Override public int getCount() {
         return data.size();
     }
 
-    @Override public Object getItem(int position) {
+    @Override public Repo getItem(int position) {
         return data.get(position);
     }
 

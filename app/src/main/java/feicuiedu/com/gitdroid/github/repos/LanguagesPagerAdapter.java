@@ -8,7 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.List;
 
-import feicuiedu.com.gitdroid.github.entity.Language;
+import feicuiedu.com.gitdroid.github.model.Language;
 import feicuiedu.com.gitdroid.github.repos.repolist.RepoListFragment;
 
 class LanguagesPagerAdapter extends FragmentPagerAdapter {

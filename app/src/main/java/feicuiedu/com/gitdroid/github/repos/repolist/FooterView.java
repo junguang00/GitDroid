@@ -8,6 +8,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import butterknife.Bind;
+import butterknife.BindString;
 import butterknife.ButterKnife;
 import feicuiedu.com.gitdroid.R;
 
@@ -17,14 +18,13 @@ public class FooterView extends FrameLayout {
     private static final int STATE_COMPLETE = 1;
     private static final int STATE_ERROR = 2;
 
-    @Bind(R.id.progressBar)
-    ProgressBar progressBar;
+    @Bind(R.id.progressBar) ProgressBar progressBar;
 
-    @Bind(R.id.tv_complete)
-    TextView tvComplete;
+    @Bind(R.id.tv_complete) TextView tvComplete;
 
-    @Bind(R.id.tv_error)
-    TextView tvError;
+    @Bind(R.id.tv_error) TextView tvError;
+
+    @BindString(R.string.load_more_error) String loadError;
 
     private int state = STATE_LOADING;
 
@@ -58,6 +58,8 @@ public class FooterView extends FrameLayout {
         progressBar.setVisibility(GONE);
         tvComplete.setVisibility(GONE);
         tvError.setVisibility(VISIBLE);
+
+        tvError.setText(String.format(loadError, error));
     }
 
     public void showComplete() {

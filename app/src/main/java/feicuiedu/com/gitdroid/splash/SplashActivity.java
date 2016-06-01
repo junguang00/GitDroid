@@ -8,6 +8,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import feicuiedu.com.gitdroid.R;
 import feicuiedu.com.gitdroid.commons.ActivityUtils;
+import feicuiedu.com.gitdroid.github.model.CurrentUser;
+import feicuiedu.com.gitdroid.github.login.LoginActivity;
 import feicuiedu.com.gitdroid.main.MainActivity;
 
 public class SplashActivity extends AppCompatActivity {
@@ -18,6 +20,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activityUtils = new ActivityUtils(this);
+        CurrentUser.clear();
         setContentView(R.layout.activity_splash);
     }
 
@@ -30,13 +33,13 @@ public class SplashActivity extends AppCompatActivity {
     public void navigateToMain(View view){
         switch (view.getId()){
             case R.id.btnLogin:
-                activityUtils.showToast("navigateToMain: login!");
+                activityUtils.startActivity(LoginActivity.class);
                 break;
             case R.id.btnEnter:
                 activityUtils.startActivity(MainActivity.class);
                 break;
         }
-
+        finish();
     }
 
 }

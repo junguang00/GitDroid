@@ -1,4 +1,4 @@
-package feicuiedu.com.gitdroid.github.entity;
+package feicuiedu.com.gitdroid.github.model;
 
 
 import com.google.gson.annotations.SerializedName;
