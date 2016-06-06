@@ -1,6 +1,7 @@
 package feicuiedu.com.gitdroid.github.network;
 
 
+import feicuiedu.com.gitdroid.commons.LoggingInterceptor;
 import feicuiedu.com.gitdroid.github.model.AccessTokenRsp;
 import feicuiedu.com.gitdroid.github.model.RepoContent;
 import feicuiedu.com.gitdroid.github.model.RepoResult;

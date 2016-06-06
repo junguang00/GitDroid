@@ -2,6 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 
+
     <item
         android:title="@string/github">
         <menu>
@@ -19,8 +20,6 @@
                     android:icon="@drawable/ic_trend"
                     android:title="@string/trend"/>
             </group>
-
-
         </menu>
     </item>
 
@@ -28,6 +27,7 @@
         android:title="@string/arsenal">
         <menu>
 
+            <group android:checkableBehavior="single">
             <item
                 android:id="@+id/arsenal_my_repo"
                 android:icon="@drawable/ic_my_repo"
@@ -36,14 +36,14 @@
                 android:id="@+id/arsenal_recommend"
                 android:icon="@drawable/ic_recommend"
                 android:title="@string/recommend"/>
-
+            </group>
         </menu>
     </item>
 
     <item
         android:title="@string/tips_and_tricks">
         <menu>
-
+            <group android:checkableBehavior="single">
             <item
                 android:id="@+id/tips_daily"
                 android:icon="@drawable/ic_tips"
@@ -52,7 +52,8 @@
                 android:id="@+id/tips_share"
                 android:icon="@drawable/ic_share"
                 android:title="@string/share"/>
-
+            </group>
         </menu>
     </item>
+
 </menu>

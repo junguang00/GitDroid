@@ -1,14 +1,13 @@
-package feicuiedu.com.gitdroid.github.network;
+package feicuiedu.com.gitdroid.commons;
 
 
 import java.io.IOException;
 
-import feicuiedu.com.gitdroid.commons.LogUtils;
 import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
 
-class LoggingInterceptor implements Interceptor {
+public class LoggingInterceptor implements Interceptor {
     @Override public Response intercept(Chain chain) throws IOException {
         Request request = chain.request();
 

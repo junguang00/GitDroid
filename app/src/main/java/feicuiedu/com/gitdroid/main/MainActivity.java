@@ -3,6 +3,7 @@ package feicuiedu.com.gitdroid.main;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
@@ -22,6 +23,7 @@ import butterknife.ButterKnife;
 import feicuiedu.com.gitdroid.R;
 import feicuiedu.com.gitdroid.commons.ActivityUtils;
 import feicuiedu.com.gitdroid.commons.LogUtils;
+import feicuiedu.com.gitdroid.gank.gankpager.GankPagerFragment;
 import feicuiedu.com.gitdroid.github.network.AvatarLoadOptions;
 import feicuiedu.com.gitdroid.github.model.CurrentUser;
 import feicuiedu.com.gitdroid.github.login.LoginActivity;
@@ -37,6 +39,9 @@ public class MainActivity extends AppCompatActivity
     private ImageView ivIcon;
     private Button btnLogin;
     private ActivityUtils activityUtils;
+
+    private HotRepoFragment hotRepoFragment;
+    private GankPagerFragment gankPagerFragment;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,10 +72,10 @@ public class MainActivity extends AppCompatActivity
 
         navigationView.setNavigationItemSelectedListener(this);
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.add(R.id.container, new HotRepoFragment());
-        transaction.commit();
+        hotRepoFragment = new HotRepoFragment();
+        replaceFragment(new HotRepoFragment());
+
+        navigationView.getMenu().findItem(R.id.github_hot_repo).setChecked(true);
     }
 
     @SuppressWarnings("ConstantConditions")
@@ -97,7 +102,36 @@ public class MainActivity extends AppCompatActivity
 
     @Override public boolean onNavigationItemSelected(MenuItem item) {
 
+        if (item.getItemId() == R.id.github_hot_repo){
+            if (! hotRepoFragment.isAdded()) {
+                replaceFragment(hotRepoFragment);
+            }
+
+        } else if (item.getItemId() == R.id.tips_daily){
+            if (gankPagerFragment == null) gankPagerFragment = new GankPagerFragment();
+            if (! gankPagerFragment.isAdded()) {
+                replaceFragment(gankPagerFragment);
+            }
+        }
+
+        for (int i = 0; i < navigationView.getMenu().size(); i++){
+            MenuItem menuItem = navigationView.getMenu().getItem(i);
+            if (menuItem != item) menuItem.setChecked(false);
+        }
+        drawerLayout.post(new Runnable() {
+            @Override public void run() {
+                drawerLayout.closeDrawer(GravityCompat.START);
+            }
+        });
+
         // 返回true代表将该菜单项变为checked状态
         return true;
+    }
+
+    private void replaceFragment(Fragment fragment){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.container, fragment);
+        transaction.commit();
     }
 }
