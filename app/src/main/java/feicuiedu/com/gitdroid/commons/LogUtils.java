@@ -1,5 +1,15 @@
 package feicuiedu.com.gitdroid.commons;
 
+/**
+ * The custom utility class for log. Centralize the control of log.
+ * In real project, you may consider use <a href="https://github.com/JakeWharton/timber">Timber</a>
+ * instead rather than reinventing the wheels.
+ *
+ * <p/>
+ *
+ * 自定义日志工具类，统一对日志输出做出控制。
+ * 在公司项目中，可以考虑使用Timber等开源日志工具，不用重复造轮子。
+ */
 @SuppressWarnings("unused")
 public final class LogUtils {
 

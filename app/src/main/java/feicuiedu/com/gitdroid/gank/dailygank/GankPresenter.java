@@ -18,9 +18,9 @@ public class GankPresenter extends MvpNullObjectBasePresenter<GankView>{
 
     private Date date;
 
-    private GankCache gankCache;
+    private final GankCache gankCache;
 
-    private Callback<GankResult> gankCallback = new Callback<GankResult>() {
+    private final Callback<GankResult> gankCallback = new Callback<GankResult>() {
         @Override public void onResponse(Call<GankResult> call, Response<GankResult> response) {
             GankResult gankResult = response.body();
 
@@ -68,12 +68,13 @@ public class GankPresenter extends MvpNullObjectBasePresenter<GankView>{
 
         List<GankItem> gankItems = gankCache.getGankData(date);
 
-        if (gankCache.isEmpty(date)) {
+        if (gankCache.isEmpty(date)) { // 如果当天没有干货数据
             getView().showEmpty();
-        } else if (gankItems != null) {
+        } else if (gankItems != null) { // 如果当天的干货数据已经缓存
             getView().hideEmpty();
             getView().setData(gankItems);
         } else {
+            // 从服务器获取每日干货数据
             getDailyGanks(date);
         }
 
@@ -82,13 +83,15 @@ public class GankPresenter extends MvpNullObjectBasePresenter<GankView>{
     private void getDailyGanks(Date date){
         if (gankCall != null) gankCall.cancel();
 
+        // 从Date实例中获取年、月、日
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
         int year = calendar.get(Calendar.YEAR);
         int month = calendar.get(Calendar.MONTH) + 1;
         int day = calendar.get(Calendar.DAY_OF_MONTH);
-        gankCall = GankClient.getInstance().getDailyData(year, month, day);
 
+        // 访问服务器接口
+        gankCall = GankClient.getInstance().getDailyData(year, month, day);
         gankCall.enqueue(gankCallback);
     }
 

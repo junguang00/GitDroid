@@ -23,6 +23,13 @@ import feicuiedu.com.gitdroid.commons.ActivityUtils;
 import feicuiedu.com.gitdroid.github.network.AvatarLoadOptions;
 import feicuiedu.com.gitdroid.github.model.Repo;
 
+/**
+ * This class show a repository's key information. It also use a {@link WebView} to load
+ * the repository's readme file.
+ *
+ * <p/>
+ * 本Activity用来展示GitHub仓库的关键信息，它还用一个WebView来显示该仓库的Readme文件。
+ */
 public class RepoInfoActivity extends MvpActivity<RepoInfoView, RepoInfoPresenter> implements RepoInfoView{
 
     private static final String KEY_REPO = "key_repo";
@@ -34,6 +41,16 @@ public class RepoInfoActivity extends MvpActivity<RepoInfoView, RepoInfoPresente
     @Bind(R.id.webView) WebView webView;
     @Bind(R.id.progressBar) ProgressBar progressBar;
 
+    /**
+     * Use this static method to start this activity to remind you that you have to put an {@link Repo}
+     * in the Intent's Bundle.
+     *
+     * <p/>
+     * 使用此静态方法来启动Activity，用来提醒你需要在Intent的Bundle中存一个Repo对象。
+     *
+     * @param context an instance of context
+     * @param repo 将在本页面上显示的GitHub仓库
+     */
     public static void open(Context context, @NonNull Repo repo) {
         Intent intent = new Intent(context, RepoInfoActivity.class);
         intent.putExtra(KEY_REPO, repo);
@@ -49,6 +66,7 @@ public class RepoInfoActivity extends MvpActivity<RepoInfoView, RepoInfoPresente
         super.onCreate(savedInstanceState);
         activityUtils = new ActivityUtils(this);
         setContentView(R.layout.activity_repo_info);
+        // 获取此仓库的Readme文件
         presenter.getReadme(repo);
     }
 
@@ -59,9 +77,12 @@ public class RepoInfoActivity extends MvpActivity<RepoInfoView, RepoInfoPresente
         repo = (Repo) getIntent().getSerializableExtra(KEY_REPO);
 
         setSupportActionBar(toolbar);
+        // 显示Toolbar的返回键
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // 将Toolbar的标题设置为仓库名称
         getSupportActionBar().setTitle(repo.getName());
 
+        // 加载仓库拥有者的头像，设置仓库关键信息(描述，全名，star和fork数量)
         ImageLoader.getInstance().displayImage(repo.getOwner().getAvatar(), ivIcon, AvatarLoadOptions.build(this));
         tvRepoInfo.setText(repo.getDescription());
         tvRepoName.setText(repo.getFullName());

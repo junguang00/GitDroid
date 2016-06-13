@@ -21,6 +21,9 @@ import feicuiedu.com.gitdroid.R;
 import feicuiedu.com.gitdroid.github.network.AvatarLoadOptions;
 import feicuiedu.com.gitdroid.github.model.Repo;
 
+/**
+ * This is just a very simple ListView's adapter, nothing new here.
+ */
 class ReposAdapter extends BaseAdapter {
 
 
@@ -29,6 +32,7 @@ class ReposAdapter extends BaseAdapter {
 
     public ReposAdapter(Context context) {
         data = new ArrayList<>();
+        // 图片加载选项
         options = AvatarLoadOptions.build(context);
     }
 

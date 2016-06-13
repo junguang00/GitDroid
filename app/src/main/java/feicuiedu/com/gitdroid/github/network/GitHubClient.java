@@ -13,6 +13,9 @@ import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+/**
+ * A simple wrapper class for {@link GitHubApi}'s implementation.
+ */
 public final class GitHubClient implements GitHubApi{
 
     private static GitHubClient sClient;
@@ -29,15 +32,17 @@ public final class GitHubClient implements GitHubApi{
 
     private GitHubClient(){
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
-                .addInterceptor(new TokenInterceptor())
-                .addInterceptor(new LoggingInterceptor())
+                .addInterceptor(new TokenInterceptor())  // 添加拦截器，处理AccessToken
+                .addInterceptor(new LoggingInterceptor()) // 添加拦截器，打印请求和响应的日志
                 .build();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(ENDPOINT)
-                .client(okHttpClient)
-                .addConverterFactory(GsonConverterFactory.create())
+                .baseUrl(ENDPOINT) // 设置url根节点
+                .client(okHttpClient) // 设置OkHttpClient
+                .addConverterFactory(GsonConverterFactory.create()) // 添加Gson转换器
                 .build();
+
+        // 由Retrofit来负责GitHubApi接口的实现
         gitHubApi = retrofit.create(GitHubApi.class);
     }
 

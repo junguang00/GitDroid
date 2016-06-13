@@ -29,10 +29,25 @@ import feicuiedu.com.gitdroid.github.model.CurrentUser;
 import feicuiedu.com.gitdroid.github.login.LoginActivity;
 import feicuiedu.com.gitdroid.github.repos.HotRepoFragment;
 
+/**
+ * This activity is a typical "drawer menu screen". We use {@link DrawerLayout} and {@link NavigationView}
+ * to implement sliding menu. An alternative way is to use 3rd libs <a href="https://github.com/jfeinstein10/SlidingMenu">SlidingMenu</a>.
+ *
+ * Real content is different fragments, when click the menu items, we switch from one fragment to another.
+ *
+ * <p/>
+ *
+ * 这个activity是一个典型的“侧滑菜单页面”。我们使用google官方的DrawerLayout和NavigationView来实现侧滑菜单。
+ * 另一种实现方式是使用三方库SlidingMenu。
+ *
+ * 页面上具体的内容是不同的Fragment，当点击侧滑菜单项时，会从一个Fragment切换到另一个Fragment。
+ */
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    // 抽屉布局
     @Bind(R.id.drawerLayout) DrawerLayout drawerLayout;
+    // 侧滑菜单视图
     @Bind(R.id.navigationView) NavigationView navigationView;
     @Bind(R.id.toolbar) Toolbar toolbar;
 
@@ -40,7 +55,9 @@ public class MainActivity extends AppCompatActivity
     private Button btnLogin;
     private ActivityUtils activityUtils;
 
+    // 热门仓库页面
     private HotRepoFragment hotRepoFragment;
+    // 每日干货页面
     private GankPagerFragment gankPagerFragment;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +71,7 @@ public class MainActivity extends AppCompatActivity
         super.onContentChanged();
         ButterKnife.bind(this);
 
+        // 获取侧滑菜单Header中的控件，这些控件无法直接通过绑定获取
         ivIcon = ButterKnife.findById(navigationView.getHeaderView(0), R.id.ivIcon);
         btnLogin = ButterKnife.findById(navigationView.getHeaderView(0), R.id.btnLogin);
 
@@ -65,16 +83,20 @@ public class MainActivity extends AppCompatActivity
 
         setSupportActionBar(toolbar);
 
+        // 设置Toolbar左上角切换侧滑菜单的按钮
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
+        // 设置菜单的选择监听器
         navigationView.setNavigationItemSelectedListener(this);
 
+        // 初始化时默认显示热门仓库Fragment
         hotRepoFragment = new HotRepoFragment();
         replaceFragment(new HotRepoFragment());
 
+        // 设置菜单中“最热门”这一项为选中状态
         navigationView.getMenu().findItem(R.id.github_hot_repo).setChecked(true);
     }
 
@@ -83,11 +105,16 @@ public class MainActivity extends AppCompatActivity
         super.onStart();
         LogUtils.trace(this);
         if (CurrentUser.isEmpty()) {
+            // 如果当前没有用户登录
             btnLogin.setText(R.string.login_github);
             return;
         }
+
+        // 当前有用户登录
         btnLogin.setText(R.string.switch_account);
+        // 将Toolbar标题设置为GitHub用户名
         getSupportActionBar().setTitle(CurrentUser.getUser().getName());
+        // 设置用户头像
         ImageLoader.getInstance().displayImage(CurrentUser.getUser().getAvatar(), ivIcon, AvatarLoadOptions.build(this));
     }
 
@@ -100,6 +127,10 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    /**
+     * @param item The selected item (被选中的菜单项)
+     * @return true to display the item as the selected item (返回true代表将此项显示为选中状态)
+     */
     @Override public boolean onNavigationItemSelected(MenuItem item) {
 
         if (item.getItemId() == R.id.github_hot_repo){
@@ -114,6 +145,7 @@ public class MainActivity extends AppCompatActivity
             }
         }
 
+        // 将其它菜单项重置为非选中状态
         for (int i = 0; i < navigationView.getMenu().size(); i++){
             MenuItem menuItem = navigationView.getMenu().getItem(i);
             if (menuItem != item) menuItem.setChecked(false);
@@ -128,6 +160,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    // 替换不同的内容Fragment
     private void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();

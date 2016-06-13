@@ -7,7 +7,12 @@ import android.view.LayoutInflater;
 import android.widget.FrameLayout;
 
 import feicuiedu.com.gitdroid.R;
-
+/**
+ * The second page in {@link feicuiedu.com.gitdroid.splash.SplashPagerFragment}.
+ *
+ * <p/>
+ * SplashPagerFragment中的第二个页面。
+ */
 public class Pager1 extends FrameLayout{
     public Pager1(Context context) {
         this(context, null);

@@ -11,6 +11,9 @@ import java.util.Locale;
 
 import feicuiedu.com.gitdroid.gank.model.GankItem;
 
+/**
+ * 一个简单的内存缓存实现，用来缓存得到的干货数据。
+ */
 public class GankCache {
 
     private static GankCache sInstance;
@@ -23,10 +26,13 @@ public class GankCache {
         return sInstance;
     }
 
+    // 用来存储某天没有干货数据
     private final HashMap<String, Boolean> emptyMap;
 
+    // 用来存储某天的干货数据
     private final LruCache<String, List<GankItem>>  lruCache;
 
+    // 日期转换，用来将Date转换为字符串，作为HashMap和LruCache的Key
     private final SimpleDateFormat simpleDateFormat;
 
     private GankCache(){

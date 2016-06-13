@@ -8,12 +8,15 @@ import java.io.Serializable;
 @SuppressWarnings("unused")
 public class User implements Serializable{
 
+    // 登录所用的账号
     private String login;
 
+    // 用户名
     private String name;
 
     private int id;
 
+    // 用户头像路径路径
     @SerializedName("avatar_url")
     private String avatar;
 

@@ -12,6 +12,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import feicuiedu.com.gitdroid.R;
 
+// 每日干货页面
 public class GankPagerFragment extends Fragment{
 
     @Bind(R.id.verticalViewPager) VerticalViewPager verticalViewPager;

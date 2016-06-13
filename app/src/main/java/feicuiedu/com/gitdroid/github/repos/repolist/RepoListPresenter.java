@@ -11,13 +11,23 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/**
+ * This presenter handles the "business logic" of querying repository list,
+ * refresh the result set and loading next page's data.
+ *
+ * <p/>
+ *
+ * 此Presenter处理如下“业务逻辑”：查询仓库列表，刷新结果集和加载下一页的数据。
+ */
 public class RepoListPresenter extends MvpNullObjectBasePresenter<PtrPageView>{
 
 
     private Call<RepoResult> reposCall;
 
+    // 此变量记录下一页数据的索引
     private int nextPage;
 
+    // 下拉刷新的回调
     private final Callback<RepoResult> refreshCallback = new Callback<RepoResult>() {
         @Override public void onResponse(Call<RepoResult> call, Response<RepoResult> response) {
             getView().stopRefresh();
@@ -45,6 +55,7 @@ public class RepoListPresenter extends MvpNullObjectBasePresenter<PtrPageView>{
         }
     };
 
+    // 上拉加载的回调
     private final Callback<RepoResult> loadMoreCallback = new Callback<RepoResult>() {
         @Override public void onResponse(Call<RepoResult> call, Response<RepoResult> response) {
             getView().hideLoadMore();

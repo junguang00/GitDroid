@@ -6,7 +6,13 @@ import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 
-
+/**
+ * This class is a very simple {@link PagerAdapter}, used by {@link feicuiedu.com.gitdroid.splash.SplashPagerFragment},
+ * no new stuff here.
+ *
+ * <p/>
+ * 此类是一个简单的PagerAdapter，用于SplashPagerFragment，没有什么新知识点。
+ */
 public class SplashPagerAdapter extends PagerAdapter {
 
     private final View[] views;

@@ -6,7 +6,10 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
-public interface GankApi {
+/**
+ * 接口来自代码家的干货集中营：http://gank.io/api。
+ */
+interface GankApi {
 
     String ENDPOINT = "http://gank.io/api/";
 

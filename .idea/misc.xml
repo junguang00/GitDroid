@@ -1,7 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="EntryPointsManager">
-    <entry_points version="2.0" />
+    <entry_points version="2.0">
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.FooterView loadError" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.FooterView tvError" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.FooterView tvComplete" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.FooterView progressBar" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.FooterView FooterView(android.content.Context context)" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.FooterView FooterView(android.content.Context context, android.util.AttributeSet attrs)" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.FooterView FooterView(android.content.Context context, android.util.AttributeSet attrs, int defStyleAttr)" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.FooterView" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.gank.dailygank.GankFragment emptyView" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.gank.dailygank.GankFragment content" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.gank.dailygank.GankFragment tvDate" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.gank.dailygank.GankFragment" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.gank.gankpager.GankPagerFragment verticalViewPager" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.gank.gankpager.GankPagerFragment" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.HotRepoFragment viewPager" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.HotRepoFragment tabLayout" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.github.repos.HotRepoFragment" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.login.LoginActivity gifImageView" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.login.LoginActivity webView" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.login.LoginActivity toolbar" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.github.login.LoginActivity" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.main.MainActivity toolbar" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.main.MainActivity navigationView" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.main.MainActivity drawerLayout" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.main.MainActivity" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager0 ivTablet" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager0 ivDesktop" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager0 Pager0(android.content.Context context)" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager0 Pager0(android.content.Context context, android.util.AttributeSet attrs)" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager0 Pager0(android.content.Context context, android.util.AttributeSet attrs, int defStyleAttr)" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager0" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager2 ivBubble3" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager2 ivBubble2" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager2 ivBubble1" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager2 Pager2(android.content.Context context)" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager2 Pager2(android.content.Context context, android.util.AttributeSet attrs)" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager2 Pager2(android.content.Context context, android.util.AttributeSet attrs, int defStyleAttr)" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager2" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repo.RepoInfoActivity toolbar" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repo.RepoInfoActivity progressBar" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repo.RepoInfoActivity webView" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repo.RepoInfoActivity tvRepoName" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repo.RepoInfoActivity tvRepoStars" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repo.RepoInfoActivity tvRepoInfo" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repo.RepoInfoActivity ivIcon" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.github.repo.RepoInfoActivity" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.RepoListFragment void autoRefresh()" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.RepoListFragment refreshError" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.RepoListFragment errorView" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.RepoListFragment emptyView" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.RepoListFragment listView" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.RepoListFragment ptrFrameLayout" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.RepoListFragment" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.ReposAdapter.ViewHolder tvRepoStars" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.ReposAdapter.ViewHolder tvRepoInfo" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.ReposAdapter.ViewHolder tvRepoName" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.ReposAdapter.ViewHolder ivIcon" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.ReposAdapter.ViewHolder ViewHolder(android.view.View view)" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.ReposAdapter.ViewHolder" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.ReposAdapter ReposAdapter(android.content.Context context)" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.ReposAdapter" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.splash.SplashActivity void navigateToMain(android.view.View view)" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.splash.SplashActivity" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment colorYellow" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment colorRed" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment colorGreen" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment ivPhone" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment layoutPhoneInner" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment layoutPhone" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment indicator" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment viewPager" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment frameLayout" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment" />
+    </entry_points>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">

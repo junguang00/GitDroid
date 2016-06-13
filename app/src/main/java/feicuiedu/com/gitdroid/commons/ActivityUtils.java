@@ -14,9 +14,24 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 import java.lang.ref.WeakReference;
+
+/**
+ * Some common methods associated with {@link Activity}, such as
+ * {@link #startActivity(Class)} and {@link #showToast(CharSequence)}.
+ * I use this class as an alternative approach of BaseActivity,
+ * to reduce the extra complexity introduced by the super deep inheritance level.
+ * It is kind of like a non-standard delegate pattern.
+ *
+ * <p/>
+ * 此类包含与Activity相关的一些常用方法，例如startActivity和showToast。
+ * 我使用这个类做为BaseActivity的替代方案，以避免过深的继承树引入的复杂性。
+ * 有点类似于一种不太标准的委托模式。
+ */
 @SuppressWarnings("unused")
 public class ActivityUtils {
 
+    // 使用弱引用，避免不恰当地持有Activity或Fragment的引用。
+    // 持有Activity的引用会阻止Activity的内存回收，增大OOM的风险。
     private WeakReference<Activity> activityWeakReference;
     private WeakReference<Fragment> fragmentWeakReference;
 
@@ -30,6 +45,14 @@ public class ActivityUtils {
         fragmentWeakReference = new WeakReference<>(fragment);
     }
 
+    /**
+     * Get the reference of the specific {@link Activity}, this method
+     * may return null, you should check the result when you invoke it.
+     *
+     * <p/>
+     * 通过弱引用获取Activity对象，此方法可能返回null，调用后需要做检查。
+     * @return reference of {@link Activity}
+     */
     private @Nullable Activity getActivity() {
 
         if (activityWeakReference != null) return activityWeakReference.get();

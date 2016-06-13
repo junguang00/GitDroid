@@ -14,7 +14,7 @@ import java.util.Date;
  *   "type":"Android",
  *   "url":"https://github.com/recruit-lifestyle/FloatingView",
  *   "used":true,
- *   "who":"mthli"
+ *   "who":"Tom"
  * }
  * </pre>
  */

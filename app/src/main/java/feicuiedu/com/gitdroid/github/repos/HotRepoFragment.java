@@ -14,6 +14,17 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import feicuiedu.com.gitdroid.R;
 
+/**
+ * This fragment is added in {@link feicuiedu.com.gitdroid.main.MainActivity}, it's just a
+ * viewpager with a corresponding {@link TabLayout}.
+ *
+ * On the viewpager, every page is an {@link feicuiedu.com.gitdroid.github.repos.repolist.RepoListFragment}.
+ *
+ * <p/>
+ * 本Fragment是被添加到MainActivity中。它上面有一个ViewPager和一个相对应的TabLayout。
+ *
+ * 在ViewPager上，每一个页面都是一个RepoListFragment。
+ */
 public class HotRepoFragment extends Fragment{
 
     @Bind(R.id.tabLayout) TabLayout tabLayout;
@@ -26,9 +37,12 @@ public class HotRepoFragment extends Fragment{
     @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         ButterKnife.bind(this, view);
 
+        // 注意此处是在Fragment中添加Fragment，属于嵌套Fragment
         viewPager.setAdapter(new LanguagesPagerAdapter(getChildFragmentManager(), getContext()));
 
+        // 将ViewPager绑定到TabLayout上
         tabLayout.setupWithViewPager(viewPager);
+        /** 此处可以直接使用{@link android.support.design.widget.TabLayout.ViewPagerOnTabSelectedListener} **/
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());

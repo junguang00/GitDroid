@@ -13,7 +13,7 @@ import java.util.Locale;
 
 import feicuiedu.com.gitdroid.gank.dailygank.GankFragment;
 
-public class GankPagerAdapter extends FragmentPagerAdapter{
+class GankPagerAdapter extends FragmentPagerAdapter{
 
     private final HashMap<String, Fragment> fragments;
     private final Date date;
