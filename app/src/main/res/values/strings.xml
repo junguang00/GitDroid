@@ -33,6 +33,14 @@
     <string name="load_more_error">加载发生错误: %s</string>
     <string name="load_more_end">没有更多数据</string>
 
+    <string name="repo_group_all">全部</string>
+    <string name="repo_group_no">未分类</string>
+    <string name="move_to">移动至</string>
+
+    <string name="delete">删除</string>
+
+    <string name="set_favorite_success">收藏成功！</string>
+
     <string name="nothing_here_have_a_rest">今天什么也没有，休息一下，和家人聊聊天吧！</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>

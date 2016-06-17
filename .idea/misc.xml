@@ -2,6 +2,9 @@
 <project version="4">
   <component name="EntryPointsManager">
     <entry_points version="2.0">
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.favorite.FavoriteFragment listView" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.favorite.FavoriteFragment tvGroupType" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.favorite.FavoriteFragment" />
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.FooterView loadError" />
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.FooterView tvError" />
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.FooterView tvComplete" />
@@ -19,6 +22,14 @@
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.HotRepoFragment viewPager" />
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.HotRepoFragment tabLayout" />
       <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.github.repos.HotRepoFragment" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.favorite.LocalReposAdapter.ViewHolder tvRepoStars" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.favorite.LocalReposAdapter.ViewHolder tvRepoInfo" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.favorite.LocalReposAdapter.ViewHolder tvRepoName" />
+      <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.favorite.LocalReposAdapter.ViewHolder ivIcon" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.favorite.LocalReposAdapter.ViewHolder ViewHolder(android.view.View view)" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.favorite.LocalReposAdapter.ViewHolder" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.favorite.LocalReposAdapter LocalReposAdapter(android.content.Context context)" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.favorite.LocalReposAdapter" />
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.login.LoginActivity gifImageView" />
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.login.LoginActivity webView" />
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.login.LoginActivity toolbar" />
@@ -40,6 +51,9 @@
       <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager2 Pager2(android.content.Context context, android.util.AttributeSet attrs)" />
       <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager2 Pager2(android.content.Context context, android.util.AttributeSet attrs, int defStyleAttr)" />
       <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.splash.pager.Pager2" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.favorite.model.RepoConverter java.util.List&lt;feicuiedu.com.gitdroid.favorite.model.LocalRepo&gt; convertAll(java.util.List&lt;feicuiedu.com.gitdroid.github.model.Repo&gt; repos)" />
+      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.favorite.model.RepoConverter RepoConverter()" />
+      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.favorite.model.RepoConverter" />
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repo.RepoInfoActivity toolbar" />
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repo.RepoInfoActivity progressBar" />
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repo.RepoInfoActivity webView" />
@@ -48,7 +62,6 @@
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repo.RepoInfoActivity tvRepoInfo" />
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repo.RepoInfoActivity ivIcon" />
       <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.github.repo.RepoInfoActivity" />
-      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.RepoListFragment void autoRefresh()" />
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.RepoListFragment refreshError" />
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.RepoListFragment errorView" />
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.RepoListFragment emptyView" />
@@ -63,8 +76,6 @@
       <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.ReposAdapter.ViewHolder" />
       <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.ReposAdapter ReposAdapter(android.content.Context context)" />
       <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.github.repos.repolist.ReposAdapter" />
-      <entry_point TYPE="method" FQNAME="feicuiedu.com.gitdroid.splash.SplashActivity void navigateToMain(android.view.View view)" />
-      <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.splash.SplashActivity" />
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment colorYellow" />
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment colorRed" />
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment colorGreen" />
@@ -76,6 +87,9 @@
       <entry_point TYPE="field" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment frameLayout" />
       <entry_point TYPE="class" FQNAME="feicuiedu.com.gitdroid.splash.SplashPagerFragment" />
     </entry_points>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="butterknife.OnClick" />
+    </list>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">

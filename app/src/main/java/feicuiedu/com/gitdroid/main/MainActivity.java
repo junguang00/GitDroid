@@ -12,6 +12,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.SubMenu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -23,6 +24,7 @@ import butterknife.ButterKnife;
 import feicuiedu.com.gitdroid.R;
 import feicuiedu.com.gitdroid.commons.ActivityUtils;
 import feicuiedu.com.gitdroid.commons.LogUtils;
+import feicuiedu.com.gitdroid.favorite.FavoriteFragment;
 import feicuiedu.com.gitdroid.gank.gankpager.GankPagerFragment;
 import feicuiedu.com.gitdroid.github.network.AvatarLoadOptions;
 import feicuiedu.com.gitdroid.github.model.CurrentUser;
@@ -59,6 +61,8 @@ public class MainActivity extends AppCompatActivity
     private HotRepoFragment hotRepoFragment;
     // 每日干货页面
     private GankPagerFragment gankPagerFragment;
+    // 我的收藏页面
+    private FavoriteFragment favoriteFragment;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,8 +100,6 @@ public class MainActivity extends AppCompatActivity
         hotRepoFragment = new HotRepoFragment();
         replaceFragment(new HotRepoFragment());
 
-        // 设置菜单中“最热门”这一项为选中状态
-        navigationView.getMenu().findItem(R.id.github_hot_repo).setChecked(true);
     }
 
     @SuppressWarnings("ConstantConditions")
@@ -143,12 +145,19 @@ public class MainActivity extends AppCompatActivity
             if (! gankPagerFragment.isAdded()) {
                 replaceFragment(gankPagerFragment);
             }
+        } else if (item.getItemId() == R.id.arsenal_my_repo) {
+            if (favoriteFragment == null) favoriteFragment = new FavoriteFragment();
+            if (! favoriteFragment.isAdded()) {
+                replaceFragment(favoriteFragment);
+            }
         }
 
         // 将其它菜单项重置为非选中状态
         for (int i = 0; i < navigationView.getMenu().size(); i++){
-            MenuItem menuItem = navigationView.getMenu().getItem(i);
-            if (menuItem != item) menuItem.setChecked(false);
+            SubMenu subMenu = navigationView.getMenu().getItem(i).getSubMenu();
+            for (int j = 0; j < subMenu.size(); j++) {
+                subMenu.getItem(j).setChecked(false);
+            }
         }
         drawerLayout.post(new Runnable() {
             @Override public void run() {

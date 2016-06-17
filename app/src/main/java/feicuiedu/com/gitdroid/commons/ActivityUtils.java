@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
 import android.support.v4.app.Fragment;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -72,7 +73,7 @@ public class ActivityUtils {
         }
     }
 
-    @SuppressWarnings("SameParameterValue") public void showToast(int resId){
+    @SuppressWarnings("SameParameterValue") public void showToast(@StringRes int resId){
         Activity activity = getActivity();
         if (activity != null) {
             String msg = activity.getString(resId);

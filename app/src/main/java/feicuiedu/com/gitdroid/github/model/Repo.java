@@ -7,6 +7,8 @@ import java.io.Serializable;
 @SuppressWarnings("unused")
 public class Repo implements Serializable{
 
+    private int id;
+
     // 仓库名称
     private String name;
 
@@ -50,5 +52,9 @@ public class Repo implements Serializable{
 
     public int getForkCount() {
         return forkCount;
+    }
+
+    public int getId() {
+        return id;
     }
 }

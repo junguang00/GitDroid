@@ -2,7 +2,6 @@ package feicuiedu.com.gitdroid.github.model;
 
 
 import android.content.Context;
-import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -62,7 +61,6 @@ public class Language implements Serializable{
             InputStream inputStream = context.getAssets().open("langs.json");
             // 将流转换为字符串
             String content = IOUtils.toString(inputStream);
-            Log.e("TAG", content);
             // 将字符串转换为对象数组
             Gson gson = new Gson();
             DEFAULT_LANGS =  gson.fromJson(content, new TypeToken<List<Language>>(){}.getType());

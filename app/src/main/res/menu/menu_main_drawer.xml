@@ -10,7 +10,8 @@
                 <item
                     android:id="@+id/github_hot_repo"
                     android:icon="@drawable/ic_hot_repo"
-                    android:title="@string/hot_repo"/>
+                    android:title="@string/hot_repo"
+                    android:checked="true"/>
                 <item
                     android:id="@+id/github_hot_coder"
                     android:icon="@drawable/ic_hot_coder"

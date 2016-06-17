@@ -23,6 +23,11 @@ import butterknife.BindString;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import feicuiedu.com.gitdroid.R;
+import feicuiedu.com.gitdroid.commons.ActivityUtils;
+import feicuiedu.com.gitdroid.favorite.local.DbHelper;
+import feicuiedu.com.gitdroid.favorite.local.LocalRepoDao;
+import feicuiedu.com.gitdroid.favorite.model.LocalRepo;
+import feicuiedu.com.gitdroid.favorite.model.RepoConverter;
 import feicuiedu.com.gitdroid.github.model.Language;
 import feicuiedu.com.gitdroid.github.model.Repo;
 import feicuiedu.com.gitdroid.github.repo.RepoInfoActivity;
@@ -100,10 +105,12 @@ implements PtrPageView{
     private ReposAdapter adapter;
     // 上拉加载时，显示在ListView最后的视图
     private FooterView footerView;
+    private ActivityUtils activityUtils;
 
     @Override public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         adapter = new ReposAdapter(getContext());
+        activityUtils = new ActivityUtils(this);
     }
 
     @Nullable @Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -124,6 +131,17 @@ implements PtrPageView{
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 RepoInfoActivity.open(getContext(), adapter.getItem(position));
+            }
+        });
+
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Repo repo = adapter.getItem(position);
+                LocalRepo localRepo = RepoConverter.convert(repo);
+                LocalRepoDao localRepoDao = new LocalRepoDao(DbHelper.getInstance(getContext()));
+                localRepoDao.createOrUpdate(localRepo);
+                activityUtils.showToast(R.string.set_favorite_success);
+                return true;
             }
         });
 
